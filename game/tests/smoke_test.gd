@@ -13,7 +13,7 @@ func _run() -> void:
         if not (packed is PackedScene):
             _fail("Not a PackedScene: " + path)
             return
-        var node := packed.instantiate()
+        var node: Node = packed.instantiate()
         if node == null:
             _fail("Could not instantiate: " + path)
             return
